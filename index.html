@@ -1,54 +1,4 @@
 <!DOCTYPE html> 
-<html>
-<body>
-<h2>Play with Balloon</h2>
-<p id ="Balloon"> 🎈</p>
-<button onClick="Increase()">Increase &uarr;</button>
-<button onClick="Decrease()">Decrease &darr;</button>
-
-<script>
-function Increase()
-{
-var csize=document.getElementById("Balloon").style.fontSize;
-if(parseInt(csize)>60)
-{
-document.getElementById("Balloon").innerHTML = "💥";
-}
-else
-{
-if(csize=="")
-{
-csize=6;
-}
-var change=parseInt(csize) + 10;
-
-document.getElementById("Balloon").style.fontSize=change.toString()+"px";
-}
-}
-function Decrease()
-{
-var csize=document.getElementById("Balloon").style.fontSize;
-if(csize=="")
-{
-csize=6;
-}
-if(csize<=0)
-{
-   change=6;
-}
-else
-{
-var change=parseInt(csize) - 10;
-}
-document.getElementById("Balloon").style.fontSize=change.toString()+"px";
-
-
-}
-
-</script>
-</body>
-</html> 
-
 
 <html lang="en">
   <head>
@@ -59,7 +9,7 @@ document.getElementById("Balloon").style.fontSize=change.toString()+"px";
   </head>
   <body>
     <h1>Play with Balloon</h1>
-    <p id="balloonImg">🎈</p>
+    <p id="balloon">🎈</p>
     <script src="app.js"></script>
   </body>
 </html> 
