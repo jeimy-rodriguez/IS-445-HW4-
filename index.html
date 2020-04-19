@@ -1,16 +1,16 @@
 <!DOCTYPE html> 
 <html>
 <body>
-<h2>Burst me or Shrink me</h2>
-<p id ="Balloon">🎈</p>
-<button onClick="Increase()">Arrow Up &uarr;</button>
-<button onClick="Decrease()">Arrow Down &darr;</button>
+<h2>Play with Balloon</h2>
+<p id ="Balloon"> 🎈</p>
+<button onClick="Increase()">Increase &uarr;</button>
+<button onClick="Decrease()">Decrease &darr;</button>
 
 <script>
 function Increase()
 {
 var csize=document.getElementById("Balloon").style.fontSize;
-if(parseInt(csize)>50)
+if(parseInt(csize)>60)
 {
 document.getElementById("Balloon").innerHTML = "💥";
 }
@@ -46,6 +46,20 @@ document.getElementById("Balloon").style.fontSize=change.toString()+"px";
 }
 
 </script>
-
 </body>
+</html> 
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Play with Balloon</h1>
+    <p id="balloonImg">🎈</p>
+    <script src="app.js"></script>
+  </body>
 </html> 
