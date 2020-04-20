@@ -1,20 +1,20 @@
 console.log("Ballon changed")
 
-document.addEventListener("keyup", inflate);
-document.addEventListener("keyup", feedback)
+document.addEventListener("keydown", sizeChange); 
+document.addEventListener("keydown", feedback)
 
 function feedback() {
-    console.log("change")
+    console.log("key was pressed")
 }
 
-function inflate() {
+function sizeChange() {
     var b = event.keyCode;
     var size = document.getElementById("balloon").style.fontSize;
     if (b == 73){
         console.log("key pressed")
-        if (parseInt(bSize)>60){
+        if (parseInt(b)>60){
             document.getElementById("balloon").innerHTML = "💥";
-            document.removeEventListener('keyup', inflate);
+            document.removeEventListener('keydown', sizeChange);
         }
         else{
             if(size==""){
@@ -29,7 +29,7 @@ function inflate() {
         console.log("key was pressed");
         if(parseInt(size)==0){
             document.getElementById("balloon").innerHTML = "Done";
-            document.removeEventListener('keyup', changeSize);
+            document.removeEventListener('keydown', change);
         } 
         else{
             if(size==""){
@@ -39,4 +39,4 @@ function inflate() {
             document.getElementById("balloon").style.fontSize = deflateSize.toString() +"px";
         }        
     }
-}
+} 
