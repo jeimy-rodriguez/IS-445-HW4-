@@ -7,16 +7,15 @@ function feedback() {
     console.log("key was pressed")
 }
 
-/*sizeChange=""*/
-
 function sizeChange() {
     var b = event.keyCode;
     var size = document.getElementById("balloon").style.fontSize;
     if (b == 73){
-        console.log("key pressed")
-        if (parseInt(b)>60){
+        /*console.log("key pressed")*/
+        if (parseInt(size)>60){
             document.getElementById("balloon").innerHTML = "💥";
             document.removeEventListener('keyup', sizeChange);
+            console.log(sizeChange)
         }
         else{
             if(size==""){
@@ -31,7 +30,8 @@ function sizeChange() {
         console.log("key was pressed");
         if(parseInt(size)==0){
             document.getElementById("balloon").innerHTML = "Done";
-            document.removeEventListener('keyup', change);
+            document.removeEventListener('keyup', sizeChange);
+            console.log(parseInt)
         } 
         else{
             if(size==""){
@@ -39,7 +39,6 @@ function sizeChange() {
             }
             var deflateSize = parseInt(size) - 10;
             document.getElementById("balloon").style.fontSize = deflateSize.toString() +"px";
-        }        
+        }       
     }
-} 
-
+}
