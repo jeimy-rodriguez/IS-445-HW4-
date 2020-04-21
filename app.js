@@ -25,9 +25,10 @@ function sizeChange() {
     }
         else if (b == 68){
         console.log("D key was pressed");
-        if(parseInt(size)==0){
-           document.getElementById("balloon").innerHTML = "PLEASE WORK";
-           document.removeEventListener('keyup', sizeChange);
+        if(parseInt(size)<=5){
+           document.getElementById("balloon").style.fontSize=30+"px"; 
+           document.getElementById("balloon").innerHTML = "Done";
+           document.removeEventListener('keydown', sizeChange);
         } 
         else{
             if(size==""){
