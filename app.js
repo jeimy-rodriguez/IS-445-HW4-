@@ -1,4 +1,4 @@
-document.addEventListener("keyup", sizeChange); 
+document.addEventListener("keydown", sizeChange); 
 /*document.addEventListener("keyup", feedback)
 
 function feedback() {
@@ -12,7 +12,7 @@ function sizeChange() {
         /*console.log("key pressed")*/
         if (parseInt(size)>60){
             document.getElementById("balloon").innerHTML = "💥";
-            document.removeEventListener('keyup', sizeChange);
+            document.removeEventListener('keydown', sizeChange);
         }
         else{
             if(size==""){
@@ -26,7 +26,7 @@ function sizeChange() {
         else if (b == 68){
         console.log("D key was pressed");
         if(parseInt(size)<=5){
-           document.getElementById("balloon").style.fontSize=30+"px"; 
+           document.getElementById("balloon").style.fontSize=30 + "px"; 
            document.getElementById("balloon").innerHTML = "Done";
            document.removeEventListener('keydown', sizeChange);
         } 
