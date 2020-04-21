@@ -1,11 +1,9 @@
-console.log("Balloon changed")
-
 document.addEventListener("keyup", sizeChange); 
-document.addEventListener("keyup", feedback)
+/*document.addEventListener("keyup", feedback)
 
 function feedback() {
     console.log("key was pressed")
-}
+}*/
 
 function sizeChange() {
     var b = event.keyCode;
@@ -15,30 +13,28 @@ function sizeChange() {
         if (parseInt(size)>60){
             document.getElementById("balloon").innerHTML = "💥";
             document.removeEventListener('keyup', sizeChange);
-            console.log(sizeChange)
         }
         else{
             if(size==""){
                 size=30;
             }
-            var inflateSize = parseInt(size) + 5;
-            document.getElementById("balloon").style.fontSize=inflateSize.toString()+"px";
+            var inflate = parseInt(size) + 5;
+            document.getElementById("balloon").style.fontSize=inflate.toString()+"px";
         }
         
     }
         else if (b == 68){
-        console.log("key was pressed");
+        console.log("D key was pressed");
         if(parseInt(size)==0){
-            document.getElementById("balloon").innerHTML = "Done";
-            document.removeEventListener('keyup', sizeChange);
-            console.log(parseInt)
+           document.getElementById("balloon").innerHTML = "PLEASE WORK";
+           document.removeEventListener('keyup', sizeChange);
         } 
         else{
             if(size==""){
                 size=30;
             }
-            var deflateSize = parseInt(size) - 10;
-            document.getElementById("balloon").style.fontSize = deflateSize.toString() +"px";
+            var deflate = parseInt(size) - 10;
+            document.getElementById("balloon").style.fontSize = deflate.toString() +"px";
         }       
     }
 }
